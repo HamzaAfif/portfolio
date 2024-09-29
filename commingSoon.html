@@ -195,7 +195,7 @@
             function erase() {
                 if (charIndex > 0) {
                     currentText = typedText[currentIndex].substring(0, charIndex - 1);
-                    element.innerHTML = currentText + "<span class='cursor'>|</span>";
+                    element.innerHTML = currentText + "<span class='cursor'></span>";
                     charIndex--;
                     setTimeout(erase, erasingSpeed);
                 } else {
