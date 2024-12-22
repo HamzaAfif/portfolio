@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza AFIF - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .coming-soon {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .coming-soon h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .coming-soon p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            font-size: 1rem;
+            color: #ff5733;
+        }
+
+        .contact a {
+            color: #ff5733;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .scroll-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.loading-bar {
+    width: 60px;
+    height: 6px; 
+    background-color: #f0f0f0; 
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar {
+    width: 100%;
+    height: 100%;
+    background-color: #4e4e4e; 
+    position: absolute;
+    left: -100%; 
+    animation: load 1.5s linear infinite; 
+}
+
+@keyframes load {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%; 
+    }
+    100% {
+        left: -100%; 
+    }
+}
+.email {
+    font-weight: bold; 
+    color: #ff5733; 
+    text-decoration: underline;
+    cursor: default; 
+}
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 10px; 
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem; 
+    }
+
+    .hero-content p {
+        font-size: 1rem; 
+    }
+
+    .coming-soon h2 {
+        font-size: 1.5rem; 
+    }
+
+    .coming-soon p {
+        font-size: 0.9rem; 
+    }
+
+    .contact {
+        font-size: 0.9rem; 
+    }
+
+    .scroll-down {
+        margin-top: 15px; 
+    }
+
+    .loading-bar {
+        width: 40px; 
+        height: 4px; 
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Hamza AFIF</div>
+            <ul class="nav-links">
+                
+            </ul>
+        </div>
+    </nav>
+    
+
+    <header class="hero" style="background-color: #f0f0f0; padding: 50px 0;">
+        <div class="hero-content animate__animated animate__fadeIn" style="text-align: center;">
+            <h1 style="color: #333; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">
+                Yes, I'm the one they call <span class="highlight" style="color: #ff5733;">Hamza</span> to fix it for you!
+            </h1>
+            <p style="color: #555; font-size: 1.2rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);">
+                Creative Engineer, Problem Solver, and Tech Enthusiast
+            </p>
+
+            <p style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                <span id="typewriter"></span><span class="cursor" style="color: #ff5733;">|</span>
+            </p>
+
+            <div class="coming-soon" style="margin-top: 10%;">
+                <h2>Coming Soon!</h2>
+                <p>I'm currently working on exciting projects including this one. Stay tuned for updates!</p>
+                <p class="contact">For inquiries, feel free to contact me at <span class="email">ha.afif25@gmail.com</span>!</p>
+                <p class="contact">Connect with me on <a href="https://www.linkedin.com/in/afif-hamza/" target="_blank">LinkedIn</a>.</p>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <div class="loading-bar">
+                <div class="bar"></div>
+            </div>
+        </a>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var typedText = ["Building Solutions.", "Creating Value.", "Exploring Tech."];
+            var element = document.getElementById("typewriter");
+            var currentText = "";
+            var currentIndex = 0;
+            var charIndex = 0;
+            var typingSpeed = 150;
+            var erasingSpeed = 100;
+            var delayBetweenTexts = 2000;
+
+            function type() {
+                if (charIndex < typedText[currentIndex].length) {
+                    currentText += typedText[currentIndex].charAt(charIndex);
+                    element.innerHTML = currentText + "<span class='cursor'></span>";
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, delayBetweenTexts);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    currentText = typedText[currentIndex].substring(0, charIndex - 1);
+                    element.innerHTML = currentText + "<span class='cursor'></span>";
+                    charIndex--;
+                    setTimeout(erase, erasingSpeed);
+                } else {
+                    currentIndex = (currentIndex + 1) % typedText.length;
+                    setTimeout(type, typingSpeed + 500);
+                }
+            }
+
+            type();
+        });
+    </script>
+
+</body>
+</html>

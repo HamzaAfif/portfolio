@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Hamza AFIF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="../index.html" class="logo">Hamza AFIF</a>
+        <button class="hamburger-menu" id="hamburger-menu">
+            &#9776;
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#achievements">Achievements</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<section class="project-hero">
+    <h1>Library Management System</h1>
+    <p>A foundational project showcasing core programming principles with C.</p>
+    <a href="#overview" class="btn">Explore Features</a>
+</section>
+
+    
+    
+    
+
+    <!-- Overview Section -->
+    <section class="overview" id="overview" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                The Library Management System is a C-based project designed to manage books, members, and borrowing operations efficiently. It provides robust functionality for managing library records, ensuring accurate and persistent storage via text files.
+            </p>
+            <p>
+                Key features include adding, modifying, deleting, and searching for books and members, along with a borrowing and reservation system.
+            </p>
+        </div>
+    </section>
+
+    <section id="features-details" style="padding: 50px 20px; background-color: #f9f9f9;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px; color: #333;">Library Management System - Key Features</h2>
+    
+            <!-- Feature 1: Adding Members -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>1. Adding Members</h3>
+                    <p>Add new members to the system by providing their name, academic year, and date of birth. The system ensures persistent storage using text files for reliability.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/ajoutMembre.PNG" alt="Adding Members">
+                </div>
+            </div>
+    
+            <!-- Feature 2: Modifying Members -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>2. Modifying Members</h3>
+                    <p>Easily update existing member details, such as correcting their name or changing their academic year, ensuring up-to-date information at all times.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/modifieMembre.PNG" alt="Modifying Members">
+                </div>
+            </div>
+    
+            <!-- Feature 3: Deleting Members -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>3. Deleting Members</h3>
+                    <p>Remove inactive or unnecessary member records from the system to maintain a clean and efficient database.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/DeleteMemeber.PNG" alt="Deleting Members">
+                </div>
+            </div>
+    
+            <!-- Feature 4: Adding Books -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>4. Adding Books</h3>
+                    <p>Keep your library updated by adding new books with essential details like title, author, and a unique identifier for accurate tracking.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/ajoutLivre.PNG" alt="Adding Books">
+                </div>
+            </div>
+    
+            <!-- Feature 5: Modifying Books -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>5. Modifying Books</h3>
+                    <p>Update book information, such as the title, author, or other metadata, to ensure your library database stays current.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/modifyBook.PNG" alt="Modifying Books">
+                </div>
+            </div>
+    
+            <!-- Feature 6: Deleting Books -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>6. Deleting Books</h3>
+                    <p>Efficiently remove outdated or incorrect book records to keep your library database clean and relevant.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/suppBook.PNG" alt="Deleting Books">
+                </div>
+            </div>
+    
+            <!-- Feature 7: Searching for Books -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>7. Searching for Books</h3>
+                    <p>Quickly find books in the library by searching for their title or unique identifier, ensuring easy access to information.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/searchbook.PNG" alt="Searching for Books">
+                </div>
+            </div>
+    
+            <!-- Feature 8: Reserving Books -->
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h3>8. Reserving Books</h3>
+                    <p>Reserve unavailable books for future borrowing, ensuring students can access important resources when needed.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="../assets/biblioC/reservation.PNG" alt="Reserving Books">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="github" style="background-color: #f7f8fa; padding: 40px 20px; text-align: center;">
+        <div class="container">
+            <h2>Explore the Code</h2>
+            <p>The full implementation of the Library Management System is available in the <strong>hh.c</strong> file on GitHub.</p>
+            <a href="https://github.com/HamzaAfif/GestionBiblioC" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: #ff5733; color: white; border-radius: 5px; font-weight: bold;">
+                <img src="../assets/githubicon.png" alt="GitHub" style="width: 20px; height: 20px;"> View on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer" style="padding: 20px; background-color: #333; color: #fff; text-align: center;">
+        <div class="container">
+            <p>Email: <a href="mailto:ha.afif25@gmail.com" style="color: #ff5733;">ha.afif25@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/afif-hamza" target="_blank" style="color: #ff5733;">linkedin.com/in/afif-hamza</a></p>
+        </div>
+    </footer>
+</body>
+<script src="../main.js"></script>
+</html>

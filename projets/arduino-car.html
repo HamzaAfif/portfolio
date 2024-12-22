@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Bluetooth Car - Hamza AFIF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Hamza AFIF</a>
+            <button class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About Me</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>Arduino Bluetooth Car</h1>
+        <p>A voice-controlled car with Arduino and Bluetooth capabilities, enhanced with obstacle detection and RFID scanning.</p>
+        <a href="#overview" class="btn">Explore Features</a>
+    </section>
+
+    <section id="technologies" style="padding: 40px 20px; background-color: #f9f9f9;">
+        <div class="container">
+            
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                <div style="text-align: center;">
+                    <img src="../assets/logos/arduino.svg" alt="Flask Logo" style="width: 100%; max-width: 100px; border-radius: 8px;">
+            
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                This project involves building a Bluetooth-controlled car using an Arduino Uno board, allowing voice commands via a Bluetooth module. The car is equipped with obstacle detection using ultrasonic sensors and additional modules for enhanced functionality.
+            </p>
+            <p>
+                The primary objectives of the project were:
+            </p>
+            <ul>
+                <li>Designing and programming a car controlled via Bluetooth and voice commands.</li>
+                <li>Integrating ultrasonic sensors for obstacle detection.</li>
+                <li>Adding modules such as RFID scanners and LCD displays for extended features.</li>
+                <li>Optimizing the Arduino code to control motors and sensors effectively.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="features" style="background-color: #f9f9f9; padding: 40px 20px;">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Bluetooth Control:</strong> Integrated HC-06 Bluetooth module to receive and execute commands from a smartphone app.</li>
+                <li><strong>Obstacle Detection:</strong> Used an HC-SR04 ultrasonic sensor to detect obstacles and navigate safely.</li>
+                <li><strong>Motor Driver:</strong> Configured L298N motor driver to control the speed and direction of two DC motors.</li>
+                <li><strong>Voice Commands:</strong> Utilized a mobile app to translate voice commands into Bluetooth signals, controlling the car's movements.</li>
+                <li><strong>RFID Scanning:</strong> Added an RFID scanner module to read tags and implement secure access or identification features.</li>
+                <li><strong>LCD Display:</strong> Incorporated an LCD screen to display real-time information like direction, speed, and obstacles.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="technical-details" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Technical Details</h2>
+            <p>
+                The Arduino Bluetooth Car project demonstrates advanced Arduino programming and electronics integration skills. The technical stack includes:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Arduino Uno:</strong> The primary microcontroller for managing sensors, motors, and communication modules.</li>
+                <li><strong>HC-06 Bluetooth Module:</strong> Enables wireless communication between the car and a smartphone.</li>
+                <li><strong>L298N Motor Driver:</strong> Controls the speed and direction of the DC motors.</li>
+                <li><strong>HC-SR04 Ultrasonic Sensor:</strong> Detects obstacles and prevents collisions.</li>
+                <li><strong>RFID Module:</strong> Reads RFID tags to add secure access features.</li>
+                <li><strong>LCD Display:</strong> Provides a user-friendly interface for real-time feedback.</li>
+            </ul>
+            <p>
+                For detailed information and the complete code, refer to the technical report below:
+            </p>
+            <iframe src="../assets/arduino.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+    </section>
+
+    <section id="gallery" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p>Here are some images showcasing the Arduino Bluetooth Car project:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                    <img src="../assets/biblioArduino/bluetooth_car_1.jpg" alt="Car Assembly" style="width: 100%; height: auto; border-radius: 10px;">
+                    <p>Car Assembly</p>
+                </div>
+                <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                    <img src="../assets/biblioArduino/bluetooth_car_2.jpg" alt="Bluetooth Module" style="width: 100%; height: auto; border-radius: 10px;">
+                    <p>RFID still not scanned</p>
+                </div>
+                <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                    <img src="../assets/biblioArduino/bluetooth_car_3.jpg" alt="Obstacle Detection" style="width: 100%; height: auto; border-radius: 10px;">
+                    <p>RFID scanned and the car ready to be used</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="github" style="background-color: #f7f8fa; padding: 40px 20px; text-align: center;">
+        <div class="container">
+            <h2>Explore the Code</h2>
+            <p>The full implementation of the code is on GitHub.</p>
+            <a href="https://github.com/HamzaAfif/arduinoCar.git" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: #ff5733; color: white; border-radius: 5px; font-weight: bold;">
+                <img src="../assets/githubicon.png" alt="GitHub" style="width: 20px; height: 20px;"> View on GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer" style="padding: 20px; background-color: #333; color: #fff; text-align: center;">
+        <div class="container">
+            <p>Email: <a href="mailto:ha.afif25@gmail.com" style="color: #ff5733;">ha.afif25@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/afif-hamza" target="_blank" style="color: #ff5733;">linkedin.com/in/afif-hamza</a></p>
+        </div>
+    </footer>
+</body>
+</html>
