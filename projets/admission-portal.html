@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Admission Portal</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Hamza AFIF</a>
+            <button class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About Me</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>Digital Admission Portal</h1>
+        <p>
+            A PHP and MySQL-based solution developed for my school to digitalize the admission process for students, teachers, and administrative staff. 
+            This portal simplifies and streamlines admissions, document approvals, exam scheduling, grading, and results tracking across various academic programs and levels.
+        </p>
+        <a href="#overview" class="btn">Explore Features</a>
+    </section>
+
+    <section id="overview" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                The Digital Admission Portal was built to replace manual workflows with an efficient digital system. Below are its key functionalities:
+            </p>
+            <ul>
+                <li><strong>Students:</strong> 
+                    <ul>
+                        <li>Log in to their personal accounts.</li>
+                        <li>Upload required admission documents.</li>
+                        <li>Track the progress of their application (percentage completion).</li>
+                        <li>Choose a preferred date and time for their exam session.</li>
+                        <li>Receive their exam convocation directly via email (PDF).</li>
+                    </ul>
+                </li>
+                <li><strong>Teachers:</strong>
+                    <ul>
+                        <li>Log in to their dashboard to manage exams.</li>
+                        <li>Upload written exams and manage oral assessments.</li>
+                        <li>Grade students’ performance for written and oral exams.</li>
+                        <li>Collaborate with admission officers for special exam sessions.</li>
+                    </ul>
+                </li>
+                <li><strong>Admission Officers:</strong>
+                    <ul>
+                        <li>Review student documents and approve or deny them with feedback.</li>
+                        <li>Manage exam sessions by creating, editing, and assigning sessions.</li>
+                        <li>Create and manage teacher accounts.</li>
+                        <li>Track assigned students by filtering data (e.g., name, ID, year, major).</li>
+                    </ul>
+                </li>
+                <li><strong>Admin Dashboard:</strong>
+                    <ul>
+                        <li>Manage users (students, teachers, admission officers).</li>
+                        <li>Search and filter students by year, major, status, or name.</li>
+                        <li>Request exams from teachers for specific sessions or programs.</li>
+                    </ul>
+                </li>
+                <li><strong>Multilevel Support:</strong> Handles all academic years (1st to 4th) and multiple programs (e.g., business and engineering).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="features" style="background-color: #f9f9f9; padding: 40px 20px;">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Document Management:</strong> Students upload required documents, and admission officers approve or deny them with detailed feedback.</li>
+                <li><strong>Exam Scheduling:</strong> Students choose their preferred date and time for exam sessions.</li>
+                <li><strong>Email Integration:</strong> Convocation emails with PDF attachments are sent directly to students after session selection.</li>
+                <li><strong>Teacher Dashboard:</strong> Teachers upload exams, manage oral assessments, and assign grades.</li>
+                <li><strong>Administrative Tools:</strong> Admins manage users and filter data with advanced search capabilities.</li>
+                <li><strong>Real-Time Progress Tracking:</strong> Students track the status of their application in percentages (e.g., 50%, 80%, 100%).</li>
+                <li><strong>Oral Exam Management:</strong> Teachers conduct and assess oral exams directly through the portal.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p>Explore screenshots of the system:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    
+                <!-- Existing Images with Descriptions -->
+                <div>
+                    <img src="../assets/admission/login-page.png" alt="Login Page" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Student Login Page</p>
+                </div>
+                <div>
+                    <img src="../assets/admission/upload-documents.png" alt="Document Upload Page" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Document Upload</p>
+                </div>
+                <div>
+                    <img src="../assets/admission/dashboard-admin.png" alt="Admin Dashboard" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Admin Dashboard</p>
+                </div>
+                <div>
+                    <img src="../assets/admission/dashboard-teacher.png" alt="Teacher Dashboard" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Teacher Dashboard</p>
+                </div>
+                <div>
+                    <img src="../assets/admission/session-selection.png" alt="Exam Session Selection" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Exam Session Selection</p>
+                </div>
+                <div>
+                    <img src="../assets/admission/email-convocation.png" alt="Email Convocation" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">Convocation Email</p>
+                </div>
+    
+                
+                <div>
+                    <img src="../assets/admission/extra1.png" alt="Extra Screenshot 1" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                </div>
+                <div>
+                    <img src="../assets/admission/extra2.png" alt="Extra Screenshot 2" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                </div>
+                <div>
+                    <img src="../assets/admission/extra3.png" alt="Extra Screenshot 3" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                </div>
+                <div>
+                    <img src="../assets/admission/extra4.png" alt="Extra Screenshot 4" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                </div>
+                <div>
+                    <img src="../assets/admission/extra5.png" alt="Extra Screenshot 4" style="width: 100%; max-width: 400px; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="privacy" style="padding: 40px 20px; background-color: #f7f8fa; text-align: center;">
+        <div class="container">
+            <h2>Confidentiality</h2>
+            <p>
+                This project was developed exclusively for the school and involves sensitive data. Therefore, the source code cannot be shared publicly. However, the features and functionalities have been demonstrated through the screenshots above. Feel free to contact me for further discussions.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer" style="padding: 20px; background-color: #333; color: #fff; text-align: center;">
+        <div class="container">
+            <p>Email: <a href="mailto:ha.afif25@gmail.com" style="color: #ff5733;">ha.afif25@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/afif-hamza" target="_blank" style="color: #ff5733;">linkedin.com/in/afif-hamza</a></p>
+        </div>
+    </footer>
+</body>
+</html>
