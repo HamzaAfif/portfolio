@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game - Hamza AFIF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Hamza AFIF</a>
+            <button class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About Me</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#achievements">Achievements</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <h1>Coin Flip Game</h1>
+        <p>A decentralized blockchain-based game where two players can join, flip a coin, and compete for a prize pool.</p>
+        <a href="#overview" class="btn">Explore Features</a>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview" id="overview" style="padding: 40px 20px;">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                The Coin Flip Game is a decentralized blockchain-based game built using Solidity, Truffle, Ganache, and Web3.js. It allows two players to join, flip a coin, and compete for a prize pool. The game features role switching, secure transactions via MetaMask, and a dynamic prize pool system.
+            </p>
+            <p>
+                Key features include creating and joining games, making guesses, flipping the coin, and leaving the game. The game ensures fairness and transparency through blockchain technology.
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery" style="padding: 40px 20px; background-color: #f9f9f9;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Project Gallery</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <!-- Image 1: Ganache Wallets Available -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/1.png" 
+                         alt="Ganache Wallets Available" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Ganache Wallets Available</p>
+                </div>
+                <!-- Image 2: Contract Address After Successful Deployment -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/2.png" 
+                         alt="Contract Address After Successfully Deploying It Into Ganache" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Contract Address After Successful Deployment</p>
+                </div>
+                <!-- Image 3: MetaMask Detection -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/3.png" 
+                         alt="MetaMask Detection" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">MetaMask Detection</p>
+                </div>
+                <!-- Image 4: Connected with the Address and ETH Available -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/4.png" 
+                         alt="Connected with the Address and ETH Available" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Connected with the Address and ETH Available</p>
+                </div>
+    
+                <!-- Image 5: Creating a New Game with Entrance Fee of 10ETH -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/5.png" 
+                         alt="Creating a New Game with Entrance Fee of 10ETH" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Creating a New Game with Entrance Fee of 10ETH</p>
+                </div>
+    
+                <!-- Image 6: Player 2 Joined and Is the Guesser -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/6.png" 
+                         alt="Player 2 Joined and Is the Guesser" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Player 2 Joined and Is the Guesser</p>
+                </div>
+    
+                <!-- Image 7: Player 2 Made a Guess of Heads -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/7.png" 
+                         alt="Player 2 Made a Guess of Heads" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Player 2 Made a Guess of Heads</p>
+                </div>
+    
+                <!-- Image 8: Coin Flipped and Landed on Tails, Player 1 Won -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/9.png" 
+                         alt="Coin Flipped and Landed on Tails, Player 1 Won" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Coin Flipped and Landed on Tails, Player 1 Won</p>
+                </div>
+    
+                <!-- Image 9: Address Updated with +10ETH for Player 1 and -10ETH for Player 2 -->
+                <div style="overflow: hidden; border-radius: 12px;">
+                    <img src="../assets/solidityScreens/8.png" 
+                         alt="Address Updated with +10ETH for Player 1 and -10ETH for Player 2" 
+                         style="width: 100%; height: auto; transition: transform 0.3s ease; cursor: pointer;">
+                    <p style="text-align: center; margin-top: 10px;">Address Updated with +10ETH for Player 1 and -10ETH for Player 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section class="github" style="background-color: #f7f8fa; padding: 40px 20px; text-align: center;">
+        <div class="container">
+            <h2>Explore the Code</h2>
+            <p>The full implementation of the Coin Flip Game is available on GitHub.</p>
+            <a href="https://github.com/HamzaAfif/solidityCoin" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: #ff5733; color: white; border-radius: 5px; font-weight: bold;">
+                <img src="../assets/githubicon.png" alt="GitHub" style="width: 20px; height: 20px;"> View on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer" style="padding: 20px; background-color: #333; color: #fff; text-align: center;">
+        <div class="container">
+            <p>Email: <a href="mailto:ha.afif25@gmail.com" style="color: #ff5733;">ha.afif25@gmail.com</a></p>
+            <p>Phone: <a href="tel:+212682918278" style="color: #ff5733;">+212 6 82 91 82 78</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/afif-hamza" target="_blank" style="color: #ff5733;">linkedin.com/in/afif-hamza</a></p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

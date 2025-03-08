@@ -1,73 +1,498 @@
-.project-hero {
-    background: linear-gradient(135deg, #1d3557, #457b9d); 
+/* Project Page Styles - Enhanced to match main portfolio */
+:root {
+    /* Colors - Matching main portfolio */
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #334155;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --gray: #64748b;
+    --gray-light: #e2e8f0;
+    --success: #10b981;
+    --info: #0ea5e9;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+  
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #334155 100%);
+  
+    /* Typography */
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Outfit", sans-serif;
+  
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+  
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+  
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Project Hero Section - Enhanced with animation and pattern */
+  .project-hero {
+    background: var(--gradient-primary);
     color: white;
     text-align: center;
-    padding: 120px 20px; 
-    border-radius: 0; 
-    margin: 0; 
-    width: 100%; 
-    min-height: 400px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; 
-}
-
-.project-hero h1 {
-    font-size: 3.2rem; 
-    font-weight: bold;
-    margin-bottom: 15px;
+    padding: 140px 20px 100px;
+    margin-top: 0;
+    width: 100%;
+    min-height: 450px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.15) 2%, transparent 0%),
+      radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.1) 2%, transparent 0%);
+    background-size: 100px 100px;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  .project-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
     line-height: 1.2;
-    max-width: 80%; 
-    margin: 0 auto; 
-}
-
-.project-hero p {
-    font-size: 1.4rem; 
-    font-weight: 300;
-    margin-bottom: 30px;
-    line-height: 1.8;
     max-width: 80%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-.project-hero .btn {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .project-hero p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease 0.3s both;
+  }
+  
+  .project-hero .btn {
     display: inline-block;
-    padding: 15px 35px; 
-    background-color: #e63946; 
-    color: white;
+    padding: 15px 35px;
+    background-color: var(--light);
+    color: var(--primary);
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     font-size: 1.2rem;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
-}
-
-.project-hero .btn:hover {
-    background-color: #d62828; 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
-    transform: translateY(-2px); 
-}
-
-
-@media (max-width: 768px) {
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease 0.6s both;
+    overflow: hidden;
+  }
+  
+  .project-hero .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: var(--transition-normal);
+  }
+  
+  .project-hero .btn:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+  
+  .project-hero .btn:hover::before {
+    width: 100%;
+  }
+  
+  /* Overview Section - Enhanced with card-like design */
+  .overview {
+    padding: var(--spacing-xl) 0 !important;
+    background-color: var(--light);
+    position: relative;
+  }
+  
+  .overview .container {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    border-top: 4px solid var(--primary);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .overview h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .overview h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+  }
+  
+  .overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Features Section - Enhanced with modern card design */
+  #features-details {
+    background-color: var(--gray-light) !important;
+    padding: var(--spacing-xl) 0 !important;
+  }
+  
+  #features-details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  #features-details h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem !important;
+    color: var(--dark);
+    margin-bottom: var(--spacing-xl) !important;
+    text-align: center;
+    position: relative;
+    padding-bottom: var(--spacing-md);
+  }
+  
+  #features-details h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+  }
+  
+  .feature-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-left: 4px solid var(--primary);
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .feature-item:nth-child(even) {
+    flex-direction: row-reverse;
+    border-left: none;
+    border-right: 4px solid var(--primary);
+  }
+  
+  .feature-text {
+    flex: 1;
+    padding: var(--spacing-md);
+  }
+  
+  .feature-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .feature-text h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary);
+  }
+  
+  .feature-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--secondary);
+  }
+  
+  .feature-image {
+    flex: 1;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feature-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 3px solid var(--gray-light);
+  }
+  
+  .feature-item:hover .feature-image img {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* GitHub Section - Enhanced with gradient and animation */
+  .github {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    padding: var(--spacing-xl) 0 !important;
+    text-align: center;
+  }
+  
+  .github .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .github h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .github p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .github a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 15px 30px !important;
+    background-color: var(--primary) !important;
+    color: white !important;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .github a:hover {
+    background-color: var(--primary-dark) !important;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+  
+  .github a img {
+    width: 24px !important;
+    height: 24px !important;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Footer - Enhanced to match main site */
+  .footer {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+    padding: var(--spacing-lg) 0 !important;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+  }
+  
+  .footer a {
+    color: var(--primary) !important;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: white !important;
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
     .project-hero h1 {
-        font-size: 2.6rem; 
+      font-size: 3rem;
+      max-width: 90%;
     }
+  
     .project-hero p {
-        font-size: 1.1rem; 
-        line-height: 1.6; 
-        margin-bottom: 20px;
+      font-size: 1.2rem;
+      max-width: 90%;
     }
+  
+    .feature-item,
+    .feature-item:nth-child(even) {
+      flex-direction: column;
+      border-left: none;
+      border-right: none;
+      border-top: 4px solid var(--primary);
+    }
+  
+    .feature-text,
+    .feature-image {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .project-hero {
-        padding: 100px 15px; 
-        min-height: 350px; 
+      padding: 120px 20px 80px;
+      min-height: 400px;
     }
+  
+    .project-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .project-hero p {
+      font-size: 1.1rem;
+    }
+  
     .project-hero .btn {
-        font-size: 1rem;
-        padding: 12px 25px;
+      padding: 12px 25px;
+      font-size: 1rem;
     }
-}
+  
+    .overview .container,
+    #features-details .container {
+      padding: var(--spacing-lg);
+    }
+  
+    .overview h2,
+    #features-details h2,
+    .github h2 {
+      font-size: 2rem !important;
+    }
+  
+    .feature-text h3 {
+      font-size: 1.3rem;
+    }
+  
+    .feature-text p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .project-hero h1 {
+      font-size: 2rem;
+    }
+  
+    .project-hero p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+  
+    .overview h2,
+    #features-details h2,
+    .github h2 {
+      font-size: 1.8rem !important;
+    }
+  
+    .overview p,
+    .feature-text p,
+    .github p {
+      font-size: 0.95rem;
+    }
+  
+    .github a {
+      padding: 10px 20px !important;
+      font-size: 1rem;
+    }
+  }
+  
+  
