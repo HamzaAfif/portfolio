@@ -1,32 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatisation de Facturation & Simulation de Crédit</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+
+    <title>Automatisation de Facturation &amp; Simulation de Crédit — Hamza AFIF</title>
+    <meta name="description" content="Streamlined invoicing and credit simulations using Excel VBA and Python (Tkinter &amp; OpenPyXL).">
+    <link rel="canonical" href="https://hamzaafif.me/projets/automatisation-facturation.html">
+    <meta name="author" content="Hamza AFIF">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#3b82f6">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hamza AFIF">
+    <meta property="og:title" content="Automatisation de Facturation &amp; Simulation de Crédit — Hamza AFIF">
+    <meta property="og:description" content="Streamlined invoicing and credit simulations using Excel VBA and Python (Tkinter &amp; OpenPyXL).">
+    <meta property="og:url" content="https://hamzaafif.me/projets/automatisation-facturation.html">
+    <meta property="og:image" content="https://hamzaafif.me/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Automatisation de Facturation &amp; Simulation de Crédit — Hamza AFIF">
+    <meta name="twitter:description" content="Streamlined invoicing and credit simulations using Excel VBA and Python (Tkinter &amp; OpenPyXL).">
+    <meta name="twitter:image" content="https://hamzaafif.me/assets/og-image.jpg">
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="project-styles.css">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hamzaafif.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://hamzaafif.me/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Automatisation de Facturation & Simulation de Crédit"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Automatisation de Facturation & Simulation de Crédit",
+      "description": "Streamlined invoicing and credit simulations using Excel VBA and Python (Tkinter & OpenPyXL).",
+      "url": "https://hamzaafif.me/projets/automatisation-facturation.html",
+      "author": {
+        "@type": "Person",
+        "name": "Hamza AFIF",
+        "url": "https://hamzaafif.me/"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://hamzaafif.me/"
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">Hamza AFIF</a>
-            <button class="hamburger-menu" id="hamburger-menu">
+            <button class="hamburger-menu" id="hamburger-menu" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
                 &#9776;
             </button>
-            <ul class="nav-links" id="nav-links">
+            <nav aria-label="Main"><ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#about">About Me</a></li>
                 <li><a href="../index.html#experience">Experience</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
                 <li><a href="../index.html#achievements">Achievements</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
+            </ul></nav>
         </div>
-    </nav>
+    </header>
+
+    <main id="main">
 
     <!-- Hero Section -->
     <section class="project-hero">
@@ -36,7 +112,7 @@
     </section>
 
     <!-- Overview Section -->
-    <section id="overview" style="padding: 40px 20px;">
+    <section class="reveal" id="overview" style="padding: 40px 20px;">
         <div class="container">
             <h2>Project Overview</h2>
             <p>
@@ -54,17 +130,17 @@
         </div>
     </section>
 
-    <section id="technologies" style="padding: 40px 20px; background-color: #f9f9f9;">
+    <section class="reveal" id="technologies" style="padding: 40px 20px; background-color: #f9f9f9;">
         <div class="container">
             
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
               
                 <div style="text-align: center;">
-                    <img src="../assets/logos/python.svg" alt="SQLite Logo" style="width: 100%; max-width: 100px; border-radius: 8px;">
+                    <img src="../assets/logos/python.svg" alt="SQLite Logo" style="width: 100%; max-width: 100px; border-radius: 8px;" width="256" height="255" loading="lazy" decoding="async">
                  
                 </div>
                 <div style="text-align: center;">
-                    <img src="../assets/logos/excel.svg" alt="HTML Logo" style="width: 100%; max-width: 100px; border-radius: 8px;">
+                    <img src="../assets/logos/excel.svg" alt="HTML Logo" style="width: 100%; max-width: 100px; border-radius: 8px;" width="32" height="32" loading="lazy" decoding="async">
               
                 </div>
                 
@@ -73,7 +149,7 @@
     </section>
     
     <!-- Features Section -->
-    <section class="features" style="background-color: #f9f9f9; padding: 40px 20px;">
+    <section class="reveal features" style="background-color: #f9f9f9; padding: 40px 20px;">
         <div class="container">
             <h2>Key Features</h2>
             <ul style="margin-left: 20px; line-height: 1.8;">
@@ -88,48 +164,48 @@
 
     <!-- Gallery Section -->
 <!-- Gallery Section -->
-<section id="gallery" style="padding: 40px 20px;">
+<section class="reveal" id="gallery" style="padding: 40px 20px;">
     <div class="container">
         <h2>Gallery</h2>
         <p>Explore the features and interfaces of the project, presented with descriptions for each image:</p>
         <!-- Image 1 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image1.png" alt="Invoice in Excel" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image1.webp" alt="Invoice in Excel" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="825" height="778" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">La facture générée dans Excel avec macros VBA.</p>
         </div>
         <!-- Image 2 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image2.png" alt="Client Table in Excel" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image2.webp" alt="Client Table in Excel" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="933" height="313" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Le tableau des clients dans Excel, organisé pour une gestion efficace.</p>
         </div>
         <!-- Image 3 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image3.png" alt="Add Client Form" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image3.webp" alt="Add Client Form" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="488" height="370" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Fenêtre d'ajout de clients via une interface simple et intuitive.</p>
         </div>
         <!-- Image 4 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image4.png" alt="Add Loan Simulation" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image4.webp" alt="Add Loan Simulation" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="514" height="376" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Fenêtre pour ajouter un emprunt dans Excel, permettant une simulation facile.</p>
         </div>
         <!-- Image 5 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image5.png" alt="Loan Simulation Table" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image5.webp" alt="Loan Simulation Table" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="975" height="309" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Tableau de simulation d'emprunt dans Excel, affichant des détails d'amortissement.</p>
         </div>
         <!-- Image 6 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image6.png" alt="Python Tkinter Homepage" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image6.webp" alt="Python Tkinter Homepage" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="975" height="698" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Fenêtre principale (homepage) dans l'application Python Tkinter.</p>
         </div>
         <!-- Image 7 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image7.png" alt="Generate Invoice and Add Client/Product" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image7.webp" alt="Generate Invoice and Add Client/Product" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="833" height="926" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Interface pour générer une facture en Word et ajouter des clients/produits dans Python.</p>
         </div>
         <!-- Image 8 -->
         <div style="margin-bottom: 40px;">
-            <img src="../assets/tkinter/image8.png" alt="Loan Simulation in Python" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+            <img src="../assets/tkinter/image8.webp" alt="Loan Simulation in Python" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;" width="503" height="423" loading="lazy" decoding="async">
             <p style="text-align: center; font-size: 1rem; margin-top: 15px;">Simulation d'emprunt dans l'application Python Tkinter avec des calculs détaillés.</p>
         </div>
     </div>
@@ -138,23 +214,42 @@
 
 
 
-    <section class="github" style="background-color: #f7f8fa; padding: 40px 20px; text-align: center;">
+    <section class="reveal github" style="background-color: #f7f8fa; padding: 40px 20px; text-align: center;">
         <div class="container">
             <h2>Explore the Code</h2>
             <p>The full code and files are available on GitHub.</p>
-            <a href="https://github.com/HamzaAfif/VBAandTkinter.git" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: #ff5733; color: white; border-radius: 5px; font-weight: bold;">
-                <img src="../assets/githubicon.png" alt="GitHub" style="width: 20px; height: 20px;"> View on GitHub
+            <a href="https://github.com/HamzaAfif/VBAandTkinter.git" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: #ff5733; color: white; border-radius: 5px; font-weight: bold;">
+                <img src="../assets/githubicon.webp" alt="GitHub" style="width: 20px; height: 20px;" width="512" height="512" loading="lazy" decoding="async"> View on GitHub
             </a>
         </div>
     </section>
     
 
 
-    <footer id="contact" class="footer" style="padding: 20px; background-color: #333; color: #fff; text-align: center;">
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <p>Email: <a href="mailto:ha.afif25@gmail.com" style="color: #ff5733;">ha.afif25@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/afif-hamza" target="_blank" style="color: #ff5733;">linkedin.com/in/afif-hamza</a></p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html">Hamza AFIF</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="mailto:ha.afif25@gmail.com" class="social-link" aria-label="Email Hamza AFIF">ha.afif25@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/afif-hamza" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/HamzaAfif" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Hamza AFIF. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+    <script src="../project-script.js" defer></script>
 </body>
 </html>

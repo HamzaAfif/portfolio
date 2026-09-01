@@ -65,6 +65,7 @@
   html {
     font-size: 16px;
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
     scrollbar-width: thin;
     scrollbar-color: var(--primary) var(--light);
   }
@@ -151,52 +152,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
-  }
-  
-  /* ===== LOADER ===== */
-  .loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: var(--z-modal);
-    transition: var(--transition-slow);
-  }
-  
-  .loader-content {
-    text-align: center;
-  }
-  
-  .loader-logo {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .loader-bar {
-    width: 200px;
-    height: 4px;
-    background-color: var(--gray-light);
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .loader-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: var(--primary);
-    transition: width 0.5s ease;
   }
   
   /* ===== SIMPLE NAVBAR ===== */
@@ -343,9 +298,7 @@
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+    animation: hero-in 0.8s ease;
   }
   
   .hero-subtitle {
@@ -1086,68 +1039,6 @@
     color: var(--light);
   }
   
-  /* ===== STORY SECTION ===== */
-  .story-section {
-    background-color: var(--gray-light);
-  }
-  
-  .story-content {
-    display: flex;
-    gap: var(--spacing-xl);
-  }
-  
-  .story-quote {
-    flex: 1;
-    background-color: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    position: relative;
-    height: 100%;
-  }
-  
-  .quote-icon {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary);
-    color: var(--light);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.25rem;
-  }
-  
-  .story-quote blockquote {
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.6;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .story-quote cite {
-    display: block;
-    text-align: right;
-    font-style: normal;
-    font-weight: 500;
-  }
-  
-  .story-text {
-    flex: 1;
-  }
-  
-  .story-text p {
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .story-text h3 {
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-  }
-  
   /* ===== CONTACT SECTION ===== */
   .contact-section {
     background-color: white;
@@ -1257,6 +1148,25 @@
     gap: var(--spacing-md);
   }
   
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    padding: 0 0.9rem;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition-normal);
+  }
+
+  /* icon-only links stay circular; text links become pills */
+  .social-link:has(.icon) {
+    width: 2.5rem;
+    padding: 0;
+  }
+
   .footer-socials .social-link {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--light);
@@ -1336,7 +1246,6 @@
     }
   
     .about-content,
-    .story-content,
     .contact-content {
       flex-direction: column;
     }
@@ -1413,3 +1322,127 @@
   }
   
   
+  /* ===== ICONS (inline sprite, replaces the Font Awesome CDN) ===== */
+  .icon-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .icon {
+    width: 1.1em;
+    height: 1.1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vertical-align: -0.18em;
+    flex: none;
+  }
+
+  .achievement-icon .icon,
+  .contact-icon .icon,
+  .social-link .icon,
+  .slider-arrow .icon,
+  .back-to-top .icon,
+  .progress-icon .icon {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  /* ===== HERO PARTICLES ===== */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--primary);
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(10px, -20px);
+    }
+    50% {
+      transform: translate(20px, 0);
+    }
+    75% {
+      transform: translate(10px, 20px);
+    }
+  }
+
+  @keyframes hero-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  /* ===== SCROLL REVEAL =====
+     Gated behind html.js so every section stays visible if the script
+     never runs. Without this, a JS failure blanks the whole page. */
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  html.js .reveal.revealed {
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-card[hidden] {
+    display: none;
+  }
+
+  /* ===== SKIP LINK & FOCUS ===== */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--spacing-md);
+    z-index: calc(var(--z-modal) + 1);
+    padding: 0.75rem 1.25rem;
+    background-color: var(--primary);
+    color: var(--light);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+  }
+
+  .skip-link:focus {
+    top: var(--spacing-md);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* ===== REDUCED MOTION ===== */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    html.js .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }

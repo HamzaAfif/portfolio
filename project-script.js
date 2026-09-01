@@ -1,80 +1,75 @@
-// Project page script
+// Shared behaviour for the individual project pages.
 document.addEventListener("DOMContentLoaded", () => {
-    // Mobile menu toggle
-    const hamburgerMenu = document.getElementById("hamburger-menu")
-    const navLinks = document.getElementById("nav-links")
-  
-    if (hamburgerMenu && navLinks) {
-      hamburgerMenu.addEventListener("click", () => {
-        navLinks.classList.toggle("active")
-      })
-  
-      // Close menu when clicking on a link
-      const links = navLinks.querySelectorAll("a")
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active")
-        })
-      })
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+  // Footer year
+  const year = document.getElementById("year")
+  if (year) year.textContent = new Date().getFullYear()
+
+  // Mobile menu
+  const hamburgerMenu = document.getElementById("hamburger-menu")
+  const navLinks = document.getElementById("nav-links")
+
+  if (hamburgerMenu && navLinks) {
+    const setOpen = (open) => {
+      navLinks.classList.toggle("active", open)
+      hamburgerMenu.setAttribute("aria-expanded", String(open))
+      hamburgerMenu.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu")
     }
-  
-    // Navbar scroll effect
-    const navbar = document.querySelector(".navbar")
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled")
-      } else {
-        navbar.classList.remove("scrolled")
+
+    hamburgerMenu.addEventListener("click", () => {
+      setOpen(!navLinks.classList.contains("active"))
+    })
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false))
+    })
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navLinks.classList.contains("active")) {
+        setOpen(false)
+        hamburgerMenu.focus()
       }
     })
-  
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll(".project-section, .project-image, .tech-stack, .project-cta")
-  
-    function checkReveal() {
-      const windowHeight = window.innerHeight
-      const revealPoint = 150
-  
-      revealElements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top
-  
-        if (elementTop < windowHeight - revealPoint) {
-          element.classList.add("revealed")
-          element.style.opacity = "1"
-          element.style.transform = "translateY(0)"
-        }
+  }
+
+  // Navbar shadow on scroll
+  const navbar = document.querySelector(".navbar")
+  if (navbar) {
+    const onScroll = () => navbar.classList.toggle("scrolled", window.scrollY > 50)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll()
+  }
+
+  // Scroll reveal. The hidden state lives in CSS behind .js, so content stays
+  // visible if this script never runs.
+  const revealElements = document.querySelectorAll(".reveal")
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach((el) => el.classList.add("revealed"))
+    return
+  }
+
+  let observerDelivered = false
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      observerDelivered = true
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add("revealed")
+        observer.unobserve(entry.target)
       })
-    }
-  
-    // Initialize elements as hidden
-    revealElements.forEach((element) => {
-      element.style.opacity = "0"
-      element.style.transform = "translateY(50px)"
-      element.style.transition = "opacity 0.5s ease, transform 0.5s ease"
-    })
-  
-    window.addEventListener("scroll", checkReveal)
-    window.addEventListener("resize", checkReveal)
-  
-    // Check on page load
-    setTimeout(checkReveal, 500)
-  
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault()
-  
-        const targetId = this.getAttribute("href")
-        const targetElement = document.querySelector(targetId)
-  
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: "smooth",
-          })
-        }
-      })
-    })
-  })
-  
-  
+    },
+    { rootMargin: "0px 0px -100px 0px" },
+  )
+  revealElements.forEach((el) => observer.observe(el))
+
+  // Safety net: the observer normally delivers its first batch within a frame.
+  // If it never does, show everything rather than leave the page blank.
+  setTimeout(() => {
+    if (observerDelivered) return
+    observer.disconnect()
+    revealElements.forEach((el) => el.classList.add("revealed"))
+  }, 2000)
+})

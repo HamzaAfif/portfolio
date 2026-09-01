@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found &mdash; Hamza AFIF</title>
+  <meta name="description" content="This page does not exist. Head back to the homepage to browse projects, experience and contact details.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#3b82f6">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+
+    .notfound-code {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 18vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--primary);
+    }
+
+    .notfound p {
+      max-width: 34rem;
+      color: var(--gray);
+      font-size: 1.125rem;
+    }
+
+    .notfound-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      justify-content: center;
+      margin-top: var(--spacing-md);
+    }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div class="notfound-code">404</div>
+    <h1>This page doesn't exist</h1>
+    <p>The link may be out of date, or the page may have moved. Everything is still one click away from the homepage.</p>
+    <div class="notfound-actions">
+      <a href="/" class="btn btn-primary">Back to homepage</a>
+      <a href="/#projects" class="btn btn-outline">Browse projects</a>
+    </div>
+  </main>
+</body>
+</html>
