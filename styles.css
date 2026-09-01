@@ -1487,3 +1487,27 @@
       font-size: 0.78rem;
     }
   }
+
+  /* ===== ACHIEVEMENT SOURCES =====
+     The school took the original press pages down, so citations point at the
+     Wayback snapshots. The note keeps that explicit rather than surprising
+     someone with archive.org chrome. */
+  .achievement-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    align-items: center;
+    margin-top: var(--spacing-md);
+  }
+
+  /* the pills carry their own margin-top for the single-link card; inside a
+     row that would double up */
+  .achievement-links .achievement-link {
+    margin-top: 0;
+  }
+
+  .link-note {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 0.85em;
+  }
