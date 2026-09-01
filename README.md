@@ -25,3 +25,19 @@ _headers              cache and security headers (Cloudflare Pages)
 ```
 
 
+
+## After editing CSS or JS, run this
+
+```bash
+python tools/stamp-assets.py
+```
+
+`_headers` caches `styles.css`, `main.js`, `project-script.js` and
+`project-styles.css` for a week. Without a versioned URL an edit takes up to
+seven days to reach anyone who has already visited the site, and in the
+meantime they see new markup styled by old CSS. The script appends a content
+hash (`styles.css?v=5627567e`) to every reference in every HTML file, so the
+URL changes only when the file changes.
+
+Forgetting it is not a silent failure you will notice locally — your own
+browser will look fine while visitors get the stale stylesheet.

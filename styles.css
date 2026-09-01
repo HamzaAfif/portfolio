@@ -197,7 +197,7 @@
   
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
   }
   
@@ -226,7 +226,7 @@
     width: 100%;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .hamburger-menu {
       display: block;
     }
