@@ -1511,3 +1511,36 @@
     font-weight: 400;
     font-size: 0.85em;
   }
+
+  /* ===== RESUME ===== */
+  .hero-cta-note {
+    margin-top: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+
+  .hero-cta-note a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .nav-resume {
+    padding: 0.4rem 0.9rem;
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-full);
+    color: var(--primary) !important;
+  }
+
+  .nav-resume:hover {
+    background-color: var(--primary);
+    color: var(--light) !important;
+  }
+
+  .nav-links li a.nav-resume::after {
+    display: none;
+  }
+
+  .contact-details a + a {
+    margin-left: var(--spacing-md);
+  }
