@@ -286,14 +286,20 @@
                   <h3>RosaBot</h3>
                   <div class="project-meta">2026 &middot; Live</div>
                   <p>
-                      A full-stack AI assistant for restaurant staff, built for the team at India Rosa. Uses tool-calling agents over a vector-searched menu to answer allergy questions, pitch dishes, suggest pairings, and run training quizzes. Handles bilingual queries, so a French menu item can be found by its English name.
+                      A bilingual assistant for the staff at India Rosa, the Montreal restaurant where I work, answering
+                      menu, allergen and cocktail-spec questions mid-shift. The obvious build is RAG &mdash; embed the menu,
+                      retrieve similar chunks. I deliberately didn't: allergen and recipe data is exact, and similarity
+                      search returns what merely <em>looks</em> close. Instead the model reaches structured JSON through
+                      function-calling tools, so every answer traces back to one deterministic lookup.
+                      An evaluation suite over real staff questions took it from <strong>44% to 81%</strong>.
                   </p>
                   <div class="tech-tags">
                       <span>FastAPI</span>
                       <span>LangChain</span>
-                      <span>ChromaDB</span>
-                      <span>OpenAI Embeddings</span>
+                      <span>LangGraph</span>
+                      <span>Function calling</span>
                       <span>React</span>
+                      <span>pytest</span>
                       <span>Railway</span>
                       <span>GitHub Actions</span>
                   </div>
@@ -348,13 +354,20 @@
                                 <h3>EasyFind</h3>
                   <div class="project-meta">2025 &middot; Coup de C&oelig;ur, GSEC 2024</div>
                                 <p>
-                                    Winner of the Coup de Coeur Award in Montreal, EasyFind is an AI assistant revolutionizing small business operations with LLM-powered actions. This advanced AI agent handles both audio and text inputs, seamlessly processing queries and performing automated actions.
+                                    Lets sellers with no technical background list and manage products entirely through
+                                    ordinary conversation on Telegram, by voice or text, with location-aware discovery for
+                                    buyers. LangChain turns a plain request into SQL against the product database, and
+                                    product photos are background-removed and categorised on the way in. Built for markets
+                                    where a seller is far more likely to have Telegram than a storefront.
                                 </p>
                                 <div class="tech-tags">
                                     <span>Python</span>
-                                    <span>OpenAI API</span>
+                                    <span>LangChain</span>
+                                    <span>GPT-4o-mini</span>
+                                    <span>NL-to-SQL</span>
                                     <span>Telegram Bot API</span>
-                                    <span>MySQL</span>
+                                    <span>SQLite</span>
+                                    <span>SQLAlchemy</span>
                                 </div>
                                 <div class="project-links">
                                     <a href="https://github.com/HamzaAfif/KaynBbot" target="_blank" rel="noopener noreferrer" class="learn-more">GitHub</a>
