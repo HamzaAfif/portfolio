@@ -138,7 +138,7 @@
             <ul>
                 <li>Integrating multiple ML models (KNN + K-Means) for accurate predictions</li>
                 <li>Implementing real-time communication between Python and Node.js</li>
-                <li>Designing RAG pipeline with LLaMA API for explainable recommendations</li>
+                <li>Feeding the KNN nearest neighbours into a LLaMA prompt so the recommendation can be explained</li>
                 <li>Handling scalable student data storage with MongoDB</li>
             </ul>
         </div>
@@ -149,7 +149,7 @@
             <h2>Key Features</h2>
             <ul style="margin-left: 20px; line-height: 1.8;">
                 <li><strong>Dual ML Approach:</strong> Combines KNN classification with K-Means clustering validation</li>
-                <li><strong>RAG Integration:</strong> Generates natural language explanations using LLaMA API</li>
+                <li><strong>Grounded explanations:</strong> the neighbours that produced the prediction are passed into the LLaMA prompt, so the reasoning reflects the model rather than being invented alongside it</li>
                 <li><strong>Real-Time Updates:</strong> WebSocket communication for live recommendations</li>
                 <li><strong>Scalable Backend:</strong> Flask + Node.js hybrid architecture with MongoDB</li>
                 <li><strong>Interactive Web Interface:</strong> Dynamic visualization of recommendation results</li>
@@ -168,7 +168,7 @@
                 <li><strong>Backend:</strong> Flask (Python) for ML models + Node.js (Express) for web services</li>
                 <li><strong>Database:</strong> MongoDB for storing student profiles and historical data</li>
                 <li><strong>Real-Time:</strong> Socket.IO for live updates between components</li>
-                <li><strong>AI Integration:</strong> LLaMA API for RAG-powered explanations</li>
+                <li><strong>AI integration:</strong> LLaMA 3.3 70B on Groq, prompted with the model's own nearest-neighbour context</li>
                 <li><strong>Frontend:</strong> Interactive dashboard with HTML/CSS/JavaScript</li>
             </ul>
         </div>
